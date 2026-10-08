@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Luiselli | BI Senior & Data Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .tab-active {
+            border-bottom-width: 4px;
+            border-color: #2563eb;
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .tab-inactive {
+            border-bottom-width: 4px;
+            border-color: transparent;
+            color: #64748b;
+        }
+        .exp-btn-active {
+            background-color: #eff6ff;
+            border-left-width: 4px;
+            border-color: #2563eb;
+            font-weight: 600;
+        }
+        .exp-btn-inactive {
+            background-color: transparent;
+            border-left-width: 4px;
+            border-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-slate-800">📊 Lucas Luiselli</span>
+                </div>
+                <div class="flex items-center space-x-4 overflow-x-auto">
+                    <button id="tab-resumen" class="tab-active px-3 py-4 text-sm focus:outline-none whitespace-nowrap" onclick="switchTab('resumen')">Visión General</button>
+                    <button id="tab-experiencia" class="tab-inactive px-3 py-4 text-sm focus:outline-none whitespace-nowrap" onclick="switchTab('experiencia')">Trayectoria Profesional</button>
+                    <button id="tab-formacion" class="tab-inactive px-3 py-4 text-sm focus:outline-none whitespace-nowrap" onclick="switchTab('formacion')">Formación y Certificaciones</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-blue-600 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-extrabold tracking-tight">Lucas Luiselli</h1>
+            <p class="mt-2 text-xl text-blue-100">Business Intelligence & Reporting Lead | Senior Data Analyst</p>
+            <div class="mt-6 flex flex-wrap gap-4 text-sm">
+                <a href="https://www.linkedin.com/in/lucas-luiselli-219428124" target="_blank" class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-full transition">👔 LinkedIn</a>
+                <span class="bg-blue-800/50 px-4 py-2 rounded-full">✉ lucasluiselli@yahoo.com</span>
+                <span class="bg-blue-800/50 px-4 py-2 rounded-full">📍 CABA, Argentina</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <section id="sec-resumen" class="block space-y-8">
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-100">
+                <h2 class="text-2xl font-bold mb-4 text-slate-800">Perfil Profesional</h2>
+                <p class="text-slate-600 leading-relaxed mb-4 text-lg">
+                    Líder técnico y especialista en Business Intelligence y Data Analytics, con trayectoria gestionando el ciclo de vida completo de soluciones analíticas, de punta a punta. Traduzco necesidades estratégicas de negocio en arquitecturas de datos escalables, modelos semánticos robustos y dashboards ejecutivos en Power BI con alto nivel de adopción corporativa.
+                </p>
+                <p class="text-slate-600 leading-relaxed text-lg">
+                    Dominio avanzado de SQL, DAX, Python y Power Query. Trabajo de forma directa con supervisores, gerentes, directores y stakeholders de múltiples regiones para optimizar la rentabilidad comercial, el control de costos operativos y la eficiencia de procesos.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <h3 class="text-2xl font-bold mb-6 text-slate-800 flex items-center">
+                    <span class="mr-2">⚡</span> Skills & Competencias
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4 text-xl">💻</div>
+                        <h4 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Technical Stack</h4>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li><strong class="text-slate-800">BI & Reporting:</strong> Power BI, DAX avanzado, Power Query, Data Modeling, Esquemas en Estrella.</li>
+                            <li><strong class="text-slate-800">Data Engineering:</strong> SQL, Python (Pandas, Polars), Apache Airflow, Docker, Azure Blob, Pipelines ETL/ELT.</li>
+                            <li><strong class="text-slate-800">Automatización:</strong> Power Automate, Git/GitHub, CaseWare IDEA, Excel avanzado.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4 text-xl">📈</div>
+                        <h4 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Business Analytics (Dominios)</h4>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li><strong class="text-slate-800">Comercial & Clientes:</strong> Budget vs. Actual, sales goals, seguimiento de ciclo de vida de clientes (cotizaciones, ventas y embarques).</li>
+                            <li><strong class="text-slate-800">People Analytics:</strong> Control de tiempo en pantalla, análisis de horas extras, retención y rotación de personal.</li>
+                            <li><strong class="text-slate-800">Finanzas & Operaciones:</strong> Rentabilidad, cadena de suministro, logística de contenedores y trazabilidad multimodal.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4 text-xl">🤝</div>
+                        <h4 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Soft Skills</h4>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-0.5">▶</span> Presentación de insights ejecutivos ante la alta gerencia.</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-0.5">▶</span> Traducción de necesidades estratégicas de negocio en arquitecturas de datos.</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2 mt-0.5">▶</span> Capacitación técnica, soporte a usuarios y gestión del cambio para la adopción de BI.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <h3 class="text-2xl font-bold mb-6 text-slate-800 flex items-center">
+                    <span class="mr-2">💡</span> Proyectos y Soluciones Destacadas
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-experiencia" class="hidden space-y-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 mb-6">
+                <h2 class="text-2xl font-bold mb-4 text-slate-800">Explorador de Trayectoria Profesional</h2>
+                <p class="text-slate-600 leading-relaxed">Esta interfaz permite profundizar en la progresión laboral. Selecciona cualquier rol en el menú lateral para desplegar dinámicamente las responsabilidades, logros y el contexto de cada posición.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/3 bg-white border border-slate-100 rounded-xl shadow-sm overflow-hidden flex flex-col" id="exp-list">
+                </div>
+                
+                <div class="w-full md:w-2/3 bg-white border border-slate-100 rounded-xl shadow-sm p-6 lg:p-10 min-h-[400px]">
+                    <div id="exp-detail-content">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-formacion" class="hidden space-y-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 mb-6">
+                <h2 class="text-2xl font-bold mb-4 text-slate-800">Historial Académico y Certificaciones</h2>
+                <p class="text-slate-600 leading-relaxed">Educación formal de grado y posgrado junto con certificaciones técnicas específicas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center">🎓 Educación Formal</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition">
+                            <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">2023 - 2024</span>
+                            <h4 class="text-lg font-bold text-slate-800 mt-2">Maestría en Generación y Análisis de Información Estadística</h4>
+                            <p class="text-slate-600">Universidad Nacional de Tres de Febrero (UNTREF)</p>
+                        </div>
+                        <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition">
+                            <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">2024</span>
+                            <h4 class="text-lg font-bold text-slate-800 mt-2">Diplomatura en Inteligencia Artificial Aplicada a Entornos Digitales</h4>
+                            <p class="text-slate-600">Universidad de Buenos Aires (UBA)</p>
+                        </div>
+                        <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm hover:shadow-md transition">
+                            <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">2017</span>
+                            <h4 class="text-lg font-bold text-slate-800 mt-2">Licenciatura en Ciencia Política</h4>
+                            <p class="text-slate-600">Universidad de Buenos Aires (UBA)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center">📜 Certificaciones e Idiomas</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-white border border-slate-200 p-4 rounded-lg shadow-sm hover:border-blue-300 transition">
+                            <div class="text-2xl mb-2">🐍</div>
+                            <h4 class="font-bold text-slate-800">Python: Machine Learning</h4>
+                            <p class="text-sm text-slate-500">Udemy (2024)</p>
+                        </div>
+                        <div class="bg-white border border-slate-200 p-4 rounded-lg shadow-sm hover:border-blue-300 transition">
+                            <div class="text-2xl mb-2">🔍</div>
+                            <h4 class="font-bold text-slate-800">Análisis de Datos</h4>
+                            <p class="text-sm text-slate-500">Google (2023)</p>
+                        </div>
+                        <div class="bg-white border border-slate-200 p-4 rounded-lg shadow-sm hover:border-blue-300 transition">
+                            <div class="text-2xl mb-2">📊</div>
+                            <h4 class="font-bold text-slate-800">Power BI - Desktop</h4>
+                            <p class="text-sm text-slate-500">Udemy (2023)</p>
+                        </div>
+                        <div class="bg-white border border-slate-200 p-4 rounded-lg shadow-sm hover:border-blue-300 transition">
+                            <div class="text-2xl mb-2">💻</div>
+                            <h4 class="font-bold text-slate-800">#SeProgramar</h4>
+                            <p class="text-sm text-slate-500">Argentina Programa (2022)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white border border-slate-200 p-5 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2">Idiomas</h4>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li><strong class="text-slate-800">Español:</strong> Nativo</li>
+                            <li><strong class="text-slate-800">Inglés:</strong> B2 (Nivel profesional)</li>
+                            <li><strong class="text-slate-800">Portugués:</strong> Intermedio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const tabs = ['resumen', 'experiencia', 'formacion'];
+
+        function switchTab(selectedTab) {
+            tabs.forEach(tab => {
+                const secEl = document.getElementById(`sec-${tab}`);
+                const btnEl = document.getElementById(`tab-${tab}`);
+                
+                if (tab === selectedTab) {
+                    secEl.classList.remove('hidden');
+                    secEl.classList.add('block');
+                    btnEl.classList.remove('tab-inactive');
+                    btnEl.classList.add('tab-active');
+                } else {
+                    secEl.classList.remove('block');
+                    secEl.classList.add('hidden');
+                    btnEl.classList.remove('tab-active');
+                    btnEl.classList.add('tab-inactive');
+                }
+            });
+        }
+
+        const projects = [
+            {
+                title: 'SurPetrol - Upstream Performance & Field Asset Monitoring',
+                description: 'Monitoreo operativo de producción de hidrocarburos (kboe/d), estandarización de BOE, balance de fluidos, disponibilidad de instalaciones y seguimiento de alertas críticas en campo.',
+                tags: ['Power BI', 'DAX', 'SQL', 'Star Schema', 'Upstream Analytics'],
+                link: 'https://github.com/LucasLuiselli93/SurPetrol-Operational-Performance'
+            },
+            {
+                title: 'Air Traffic Control & Resource Management Dashboard',
+                description: 'Supervisión de performance operativa y dotación en aeropuertos (EANA/ANAC). Optimización de costos con análisis P90 y reducción del 18% en horas extras.',
+                tags: ['Power BI', 'DAX', 'SQL', 'Star Schema'],
+                link: 'https://github.com/LucasLuiselli93/ATM-Operational-Performance-Analytics'
+            },
+            {
+                title: 'Logistics Global Performance & Sales Goals Dashboard',
+                description: 'Monitoreo de objetivos comerciales (Booking y CBM) a nivel global con RLS dinámico, resolución de granularidad temporal y esquema de constelación.',
+                tags: ['Power BI', 'DAX', 'SQL (Oracle)', 'RLS'],
+                link: 'https://github.com/LucasLuiselli93/Goals-Sales-PBI'
+            },
+            {
+                title: 'Airflow ETL Multinodo – PostgreSQL → Azure Data Lake',
+                description: 'Pipeline de ingeniería de datos para consolidación de operaciones marítimas regionales (~1.5M registros diarios) con Apache Airflow, Polars y Parquet.',
+                tags: ['Apache Airflow', 'Python', 'Polars', 'Azure Data Lake', 'Docker'],
+                link: 'https://github.com/LucasLuiselli93/airflow-etl-multinode'
+            },
+            {
+                title: 'Análisis Predictivo de Accidentes Cerebrovasculares (ACV)',
+                description: 'Estudio bioestadístico y modelado de clasificación mediante Regresión Logística multivariada sobre 5,110 registros clínicos para evaluar factores de riesgo de ACV.',
+                tags: ['R', 'RPubs', 'Regresión Logística', 'EDA'],
+                link: 'https://rpubs.com/LucasGLuiselli/1202003'
+            },
+            {
+                title: 'Reclamos de Seguro de Auto',
+                description: 'Análisis exploratorio de datos (EDA) y modelado predictivo de siniestralidad automotriz en Python para evaluar perfiles de riesgo y propensión a reclamos.',
+                tags: ['Python', 'Jupyter', 'Pandas', 'Risk Analytics', 'EDA'],
+                link: 'https://github.com/LucasLuiselli93/datos/blob/main/Car_Insurances_Analysis.ipynb'
+            },
+            {
+                title: 'Data Pipeline de Ventas',
+                description: 'Pipeline ETL modular en Python para procesar datos transaccionales de pedidos, normalización, manejo de logs y carga automatizada en PostgreSQL.',
+                tags: ['Python', 'Pandas', 'PostgreSQL', 'ETL'],
+                link: 'https://github.com/LucasLuiselli93/logistic-python-etl'
+            }
+        ];
+
+        function renderProjects() {
+            const container = document.getElementById('projects-grid');
+            container.innerHTML = projects.map(p => `
+                <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-lg hover:border-blue-400 transition-all duration-300 flex flex-col h-full">
+                    <h4 class="text-lg font-bold text-slate-800 mb-2">${p.title}</h4>
+                    <p class="text-sm text-slate-600 mb-5 flex-grow">${p.description}</p>
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        ${p.tags.map(t => `<span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-md">${t}</span>`).join('')}
+                    </div>
+                    <a href="${p.link}" target="_blank" class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 mt-auto group">
+                        Ver Solución 
+                        <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        renderProjects();
+
+        const experiences = [
+            {
+                id: 'msl',
+                title: 'Líder Operativo de Business Intelligence / BI Analyst',
+                company: 'MSL Corporate',
+                date: 'Agosto 2024 – Actualidad',
+                tasks: [
+                    'Lidero operativamente el departamento de BI: centralizo el roadmap analítico regional y coordino los requerimientos estratégicos de los directores de Operaciones, Finanzas, Ventas y Marketing de múltiples países.',
+                    'Diseño y desarrollo modelos semánticos complejos en Power BI con DAX avanzado y esquemas multidimensionales, reemplazando reportería manual y habilitando decisiones en tiempo real sobre cumplimiento de metas y rentabilidad.',
+                    'Diseño y optimizo pipelines de extracción y transformación (ETL) con SQL y Python, consolidando datos transaccionales heterogéneos y garantizando la integridad y auditabilidad de los datos corporativos.',
+                    'Desarrollé la suite de reporting de Importación/Exportación Marítima y Optimización de Contenedores, mejorando la visibilidad del factor de ocupación de carga (CBM) y reduciendo costos operativos asociados.',
+                    'Desarrollé en Power BI la suite de seguimiento de clientes (cotizaciones, ventas y embarques), que permitió al equipo comercial y de marketing detectar clientes que dejaron de cotizar o contratar y así tomar acciones de reactivación.',
+                    'Desarrollé en Power BI la suite de People Analytics, que permitió al equipo de RRHH y de Administración detectar desvíos en tiempo en pantalla, horas extras y rotación de personal.',
+                    'Presento insights ejecutivos a la alta gerencia y lidero programas de capacitación técnica y soporte a usuarios finales, elevando la adopción de la plataforma de BI en toda la organización.'
+                ]
+            },
+            {
+                id: 'eana',
+                title: 'Analista de Datos Senior',
+                company: 'Empresa Argentina de Navegación Aérea (EANA S.E.)',
+                date: 'Julio 2024 – Actualidad',
+                tasks: [
+                    'Conduzco el análisis estadístico, operativo y contable para las áreas de Auditoría y Control de Gestión de la navegación aérea nacional.',
+                    'Desarrollé tableros de comando en Power BI para monitorear tráfico aéreo y dotación de personal, aplicando modelado estadístico por percentiles (P90) para optimizar la planificación de turnos y reducir el sobrecosto en horas extras.',
+                    'Automatizo procesos de conciliación masiva de datos y auditoría con scripts en Python, CaseWare IDEA y flujos en Power Automate, reduciendo de forma significativa las horas de tareas manuales y los errores de carga.',
+                    'Estandarizo datasets y fuentes críticas de información operativa para asegurar auditorías normativas transparentes y disponibilidad de datos para los entes reguladores.'
+                ]
+            },
+            {
+                id: 'gcaba',
+                title: 'Analista de Datos Semi-Senior (PMO)',
+                company: 'Ministerio de Desarrollo Humano y Hábitat – GCABA',
+                date: '2022 – 2023',
+                tasks: [
+                    'Centralicé el análisis y monitoreo cuantitativo de proyectos habitacionales en la PMO de la Dirección General de Mejoramiento de Viviendas.',
+                    'Implementé modelos analíticos en R y SQL, integrados con tableros ejecutivos en Power BI, para seguir el avance físico frente a las curvas de certificación presupuestaria.'
+                ]
+            },
+            {
+                id: 'sigen',
+                title: 'Analista Semi-Senior de Datos y Auditoría',
+                company: 'Sindicatura General de la Ciudad de Buenos Aires (SGCBA)',
+                date: '2018 – 2022',
+                tasks: [
+                    'Supervisé el monitoreo analítico de proyectos de auditoría gubernamental, asegurando el mantenimiento y la correcta documentación según normativa.',
+                    'Diseñé tableros de control de gestión y matrices de riesgo en Power BI para la evaluación sistemática de dependencias públicas y el apoyo a la toma de decisiones institucionales.'
+                ]
+            }
+        ];
+
+        let currentExpId = 'msl';
+
+        function renderExpList() {
+            const listContainer = document.getElementById('exp-list');
+            listContainer.innerHTML = '';
+            
+            experiences.forEach(exp => {
+                const btn = document.createElement('button');
+                const isActive = exp.id === currentExpId;
+                
+                btn.className = `w-full text-left px-5 py-4 focus:outline-none transition-colors duration-200 border-b border-slate-100 last:border-b-0 ${isActive ? 'exp-btn-active' : 'exp-btn-inactive hover:bg-slate-50'}`;
+                
+                btn.onclick = () => {
+                    currentExpId = exp.id;
+                    renderExpList();
+                    renderExpDetail();
+                };
+
+                btn.innerHTML = `
+                    <div class="font-bold ${isActive ? 'text-blue-700' : 'text-slate-700'}">${exp.company}</div>
+                    <div class="text-sm ${isActive ? 'text-blue-500' : 'text-slate-500'}">${exp.title}</div>
+                `;
+                
+                listContainer.appendChild(btn);
+            });
+        }
+
+        function renderExpDetail() {
+            const detailContainer = document.getElementById('exp-detail-content');
+            const exp = experiences.find(e => e.id === currentExpId);
+            
+            if (!exp) return;
+
+            let tasksHtml = exp.tasks.map(task => `<li class="mb-3 text-slate-600 flex items-start"><span class="text-blue-500 mr-2 mt-1">▶</span> <span class="leading-relaxed">${task}</span></li>`).join('');
+
+            detailContainer.innerHTML = `
+                <div class="animate-fade-in">
+                    <h3 class="text-2xl font-extrabold text-slate-800">${exp.title} <span class="text-blue-600">@ ${exp.company}</span></h3>
+                    <div class="inline-block mt-2 mb-6 bg-slate-100 text-slate-600 text-sm font-semibold px-3 py-1 rounded-full">
+                        🗓 ${exp.date}
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Responsabilidades y Logros</h4>
+                    <ul class="list-none pl-0">
+                        ${tasksHtml}
+                    </ul>
+                </div>
+            `;
+        }
+
+        renderExpList();
+        renderExpDetail();
+    </script>
+</body>
+</html>
